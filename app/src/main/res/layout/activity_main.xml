@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- Main buttons for adding/clearing cities -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,19 +26,19 @@
             android:text="CLEAR ALL" />
     </LinearLayout>
 
+    <!-- List of cities -->
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:choiceMode="singleChoice"
-        android:listSelector="#999999">
+        android:listSelector="#999999" />
 
-    </ListView>
-
+    <!-- Add city input field -->
     <LinearLayout
         android:id="@+id/field_nameEntry"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="bottom"
         android:visibility="invisible">
@@ -60,6 +61,30 @@
             android:layout_weight="1"
             android:text="CONFIRM" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_activity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView_cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City Name"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginTop="24dp" />
     </LinearLayout>
 
 </LinearLayout>
